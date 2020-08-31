@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Python – Programming Language is a Language</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>First of all<br><h1>Programming Language is a Language</h1></section>
+				<section>
+					Programming languages is a language to describe how we create, store, and change data.
+				</section>
+				<section>
+					So with Programming Language such as Python we can create data, then store it for later use, and modify or change it.
+				</section>
+				<section>
+					Not really useful explanation I guess.
+				</section>
+				<section>
+					So lets start again. One step at a time. What is data?
+				</section>
+				<section>
+					<div>The simplest data are:</div>
+					<ul>
+						<li>numbers</li>
+						<li>strings</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Strings</h2>
+					<pre><code data-trim data-line-numbers>
+						"this is a python string"
+					</code></pre>
+				</section>
+				<section>
+					Note the number <code>1</code> on the right side of the example bellow
+					<pre><code data-trim data-line-numbers>
+						&nbsp;
+					</code></pre>
+					<p>This is a line number. Python programming language are written line by line. Like a lyrics.</p>
+					<p>Each line represent single instruction, an action, a step that intend to create, or sore, or change piece of data.</p>
+					<p>That is why programmers are saying that they read or write programs line by line.</p>
+				</section>
+				<section>
+					But lets get back to our data examples, <code>strings</code> and <code>numbers</code>
+				</section>
+				<section>
+					<h2>Numbers</h2>
+					<pre><code data-trim data-line-numbers>
+1
+2020
+1.61803398875
+						</code></pre>
+				</section>
+				<section>
+					<code>1</code> is a number. A really basic number.
+				</section>
+				<section>
+					<code>2020</code> it is a year when this slides are made. And it is a number.
+				</section>
+				<section>
+					And <code>1.61803398875</code> it is a number as well. And this number represent an interesting number the golden ratio.
+				</section>
+				<section>
+					<p>A string <code>"it is a python string"</code> and a number <code>2020</code> it is a data.</p>
+					<p>A data that represent a string with characters and number of a year that we can create in Python.</p>
+				</section>
+				<section>
+					<p>When we type a string or a number like this:</p>
+					<pre><code data-trim data-line-numbers>
+						"this is a python string"
+						2020
+					</code></pre>
+					<p>we are creating data.</p>
+					<p>When I saying type a mean we type text in the text editor like Google Docs or Microsoft Word but better.</p>
+					<p>Line by line and creating instruction in a programming language.</p>
+					<p>This instructions will be executed by a computer, its central processed unit or CPU. CPU is a pretty cool thing by the way!</p>
+				</section>
+				<section>
+					<p>There are much more types of data but lets concentrate on strings and numbers.</p>
+				</section>
+				<section>
+					<p>No we have understanding what data is. How we can store it in a program language such as Python?</p>
+				</section>
+				<section>
+					<p>We can store data in computer memory.</p>
+					<p>To do so we can use a line with an instruction like bellow:</p>
+					<pre><code data-trim data-line-numbers>
+						a_string_variable = "this is a python string"
+						a_year_variable = 2020
+					</code></pre>
+					<p>Here on the first line we store string data and on the line 2 store a number data.</p>
+				</section>
+				<section>
+					<p>We store this data in a computer memory and need something to refer to it.</p>
+					<p>On the left side of <code>=</code> sign we have a name:</p>
+					<pre><code data-trim data-line-numbers>
+						a_string_variable = "this is a python string"
+						a_year_variable = 2020
+					</code></pre>
+					<p><code>a_string_variable</code> it is a name that points to the string in the memory
+					and <code>a_year_variable</code> it is a name that points to the number in the memory.</p>
+				</section>
+				<section>
+					<h2>Variables</h2>
+					<p>Name that points into a piece of data in the computer memory called variables.</p>
+				</section>
+				<section>
+					<p>Often in programming thing are called after a meaning.</p>
+					<p>Variable are good example of it. It is called this way because they are used to store variable data and can change over time in Python.</p>
+				</section>
+				<section>
+					<p>Here variable <code>piece_of_data</code> store 4 different values:</p>
+					<pre><code data-trim data-line-numbers>
+						piece_of_data = "abra"
+						piece_of_data = "cadabra"
+						piece_of_data = 37
+						piece_of_data = 0
+					</code></pre>
+				</section>
+				<section>
+					<p>On each line we <em>assign</em> different data to a variable.</p>
+					<p>First, two stings on line 1 and 2.</p>
+					<p>Then, two numbers on line 2 and 3.</p>
+					<pre><code data-trim data-line-numbers="1-2|3-4">
+						piece_of_data = "abra"
+						piece_of_data = "cadabra"
+						piece_of_data = 37
+						piece_of_data = 0
+					</code></pre>
+				</section>
+				<section>
+					<p>On each line, the state of the computer's memory and as a result of our 4 lines program changes.</p>
+				</section>
+				<section>
+					<p>On line 1 our program stores string <code>"abra"</code></p>
+					<pre><code data-trim data-line-numbers="1">
+						piece_of_data = "abra"
+						piece_of_data = "cadabra"
+						piece_of_data = 37
+						piece_of_data = 0
+					</code></pre>
+					How variable pointing (or referring) to data in the memory:
+					<pre><code data-trim>
+["abra"]
+ ^
+ piece_of_data
+					</code></pre>
+					<p><code>[]</code> characters represents the computer memory and what inside of it.</p>
+				</section>
+				<section>
+					<p>On line 2 our program stores string <code>"cadabra"</code></p>
+					<pre><code data-trim data-line-numbers="2">
+						piece_of_data = "abra"
+						piece_of_data = "cadabra"
+						piece_of_data = 37
+						piece_of_data = 0
+					</code></pre>
+					How variable pointing (or referring) to data in the memory:
+					<pre><code data-trim>
+["abra", "cadabra"]
+          ^
+          piece_of_data
+					</code></pre>
+				</section>
+				<section>
+					<p>On line 3 our program stores number <code>37</code></p>
+					<pre><code data-trim data-line-numbers="3">
+						piece_of_data = "abra"
+						piece_of_data = "cadabra"
+						piece_of_data = 37
+						piece_of_data = 0
+					</code></pre>
+					How variable pointing (or referring) to data in the memory:
+					<pre><code data-trim>
+["abra", "cadabra", 37]
+                    ^
+                    piece_of_data
+					</code></pre>
+				</section>
+				<section>
+					<p>On line 4 our program stores number <code>0</code></p>
+					<pre><code data-trim data-line-numbers="4">
+						piece_of_data = "abra"
+						piece_of_data = "cadabra"
+						piece_of_data = 37
+						piece_of_data = 0
+					</code></pre>
+					How variable pointing (or referring) to data in the memory:
+					<pre><code data-trim>
+["abra", "cadabra", 37, 0]
+                        ^
+                        piece_of_data
+					</code></pre>
+				</section>
+				<section>
+					<p>At the end of our 4 line program we in the memory have all 4 data that we created and <code>piece_of_data</code> variable points to the last data that we created – number <code>0</code></p>
+					<pre><code data-trim data-line-numbers="4">
+						piece_of_data = "abra"
+						piece_of_data = "cadabra"
+						piece_of_data = 37
+						piece_of_data = 0
+					</code></pre>
+					How variable pointing (or referring) to data in the memory:
+					<pre><code data-trim>
+["abra", "cadabra", 37, 0]
+                        ^
+                        piece_of_data
+					</code></pre>
+				</section>
+				<section>
+					<p>At the end of the program we have access to <code>0</code>. This means that we can refer only to the data that we stored in a named variable.</p>
+				</section>
+				<section>
+					<p>If we add another line with another <code>0</code> at line 5 to our program this will create another <code>0</code> to the memory:</p>
+					<pre><code data-trim data-line-numbers="5">
+						piece_of_data = "abra"
+						piece_of_data = "cadabra"
+						piece_of_data = 37
+						piece_of_data = 0
+						piece_of_data = 0
+					</code></pre>
+					How variable pointing (or referring) to data in the memory:
+					<pre><code data-trim>
+["abra", "cadabra", 37, 0, 0]
+                           ^
+                           piece_of_data
+					</code></pre>
+				</section>
+				<section>
+					<p>This is how we can store data in programs. What about to modify them.</p>
+				</section>
+				<section>
+					Python has 35 special words:
+					<br>
+					<code>
+						False      await      else       import     pass
+						None       break      except     in         raise
+						True       class      finally    is         return
+						and        continue   for        lambda     try
+						as         def        from       nonlocal   while
+						assert     del        global     not        with
+						async      elif       if         or         yield	
+					</code>
+				</section>
+				<section>
+					<section>
+						Special words in programming called <em>Keywords</em>.
+					</section>
+					<section>
+						Keywords has a special meaning in programming languages.
+						When they are used they produce some definite actions.
+						Let's take a look.
+					</section>
+				</section>
+				<section>
+					<code>for in</code>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+			});
+		</script>
+	</body>
+</html>

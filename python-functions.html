@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Python – Functions</title>
+
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Python – Functions</h1>
+                    <p>How to make functions and how to use them in Python</p>
+                </section>
+                <section>
+                    <p>A function is 1 or more lines of code that we group together and give it a name.</p>
+                </section>
+                <section>
+                    <h2>How to make them</h2>
+                </section>
+                <section>
+                    <p>Let's create a simple function</p>
+                    <pre><code class="python" data-trim data-line-numbers>
+                        def name_of_the_function:
+                            pass
+                    </code></pre>
+                    <p>Here I using <code>pass</code> keyword because my function does nothing but it should contain a body.</p>
+                </section>
+                <section>
+                    <p>What is body of a function?</p>
+                    <pre><code class="python" data-trim data-line-numbers="2">
+                        def name_of_the_function:
+                            pass
+                    </code></pre>
+                    <p>Body of a function is a lines of code that define what the function does</p>
+                </section>
+                <section>
+                    <p>Let's make addition function:</p>
+                    <pre><code class="python" data-trim data-line-numbers="1">
+                        def add(a, b):
+                            return a + b
+                    </code></pre>
+                    <p>On line 1 our function starts with <code>def</code> keyword that saying we are going to <em>def</em>ine a function.</p>
+                    <p>Of course, we need a name for the function and it goes right after <code>def</code> keyword. Then we need <code>()</code> and <code>:</code></p>
+                </section>
+                <section>
+                    TODO
+                </section>
+                <section>
+                    <h2>Why we need functions</h2>
+                </section>
+                <section>
+                    <p>If in a program we need to repeatedly write 1 or more lines of code several times we can create a functions with these lines and reduce headache of writing and editing these lines multiple time in the program.</p>
+                </section>
+                <section>
+                    <h3>Reduce Repetitive Code</h3>
+                    <p>Can you spot repetition?</p>
+                    <pre><code class="python" data-trim data-line-numbers>
+                        group_a = [23, 100, 32, 1, 2, 89]
+                        sum = 0
+                        for num in group_a:
+                            sum += num
+                        mean = sum / len(group_a)
+                        print(mean) # => 41.166666666666664
+
+                        sum = 0
+                        group_b = [34, 25, 21, 80, 67, 3]
+                        for num in group_b:
+                            sum += num
+                        mean = sum / len(group_a)
+                        print(mean) # => 38.333333333333336
+                    </code></pre>
+                </section>
+                <section>
+                    <p>We can rewrite it to:</p>
+                    <pre><code class="python" data-trim data-line-numbers>
+                        def mean(numbers):
+                            sum = 0
+                            for num in numbers:
+                                sum += num
+                            return sum / len(numbers)
+
+                        group_a = [23, 100, 32, 1, 2, 89]
+                        print(mean(group_a)) # => 41.166666666666664
+                        group_b = [34, 25, 21, 80, 67, 3]
+                        print(mean(group_b)) # => 38.333333333333336
+                    </code></pre>
+                    <p>As a result we have less lines and more readable code.</p>
+                </section>
+                <section>
+                    <h3>Readability of the code</h3>
+                    <p>What I mean by readable?</p>
+                    <p>I mean that the later code with the <code>mean</code> function is literally easier to read.</p> 
+                    <p>Because of the name of the function brings some information, it is easier to read code naturally as a story.</p>
+                </section>
+                <section>
+                    <p>Take a look:</p>
+                    <pre><code class="python" data-trim data-line-numbers>
+                        def mean(numbers):
+                            return sum(numbers) / len(numbers)
+
+                        def take_smaller(left, right):
+                            return min(left, right)
+
+                        group_a = [23, 100, 32, 1, 2, 89]
+                        group_b = [34, 25, 21, 80, 67, 3]
+                        print(take_smaller(mean(group_a), mean(group_b))) # => 38.333333333333336
+                    </code></pre>
+                    <p>This looks more like a real language and we can read it like story and sentences.</p>
+                </section>
+                <section>
+                    <p>Take a look:</p>
+                    <pre><code class="python" data-trim data-line-numbers>
+                        def mean(numbers):
+                            return sum(numbers) / len(numbers)
+
+                        def take_smaller(left, right):
+                            return min(left, right)
+
+                        group_a = [23, 100, 32, 1, 2, 89]
+                        group_b = [34, 25, 21, 80, 67, 3]
+                        print(take_smaller(mean(group_a), mean(group_b))) # => 38.333333333333336
+                    </code></pre>
+                    <p>This is powerful idea. Because name of the function can explain what it does.</p>
+                </section>
+                <section>
+                    <p>For example when we thing about a door everyone can imagine what it does instantaneously. And the difference between what two people think a door does will be really small.</p>
+                </section>
+                <section>
+                    <pre><code class="python" data-trim data-line-numbers="2,5">
+                        def mean(numbers):
+                            return sum(numbers) / len(numbers)
+
+                        def take_smaller(left, right):
+                            return min(left, right)
+
+                        group_a = [23, 100, 32, 1, 2, 89]
+                        group_b = [34, 25, 21, 80, 67, 3]
+                        print(take_smaller(mean(group_a), mean(group_b))) # => 38.333333333333336
+                    </code></pre>
+                    <p>Python is so cool that it has <code>sum</code>, <code>len</code>, and <code>min</code> functions that has meaningful names and we understand what they does right away.</p>
+                </section>
+                <section>
+                    <pre><code class="python" data-trim data-line-numbers>
+                        def mean(numbers):
+                            # sum = 0
+                            # for n in numbers:
+                            #   sum += n
+                            # return sum
+                            return sum(numbers) / len(numbers)
+
+                        def take_smaller(left, right):
+                            # if left >= right:
+                            #   return right
+                            # else:
+                            #   return left
+                            return min(left, right)
+                    </code></pre>
+                    <p>By using them we hide a significant information behind them. Code become terse but understanding what it does increases – this is real power!</p>
+                </section>
+                <section>
+                    <h3>Summarizing</h3>
+                    <p>We will use functions to:</p>
+                    <ul>
+                        <li>Eliminate repeated code by hiding it behind a named function.</li>
+                        <li>Increase readability of the code.</li>
+                    </ul>
+                    <p>Functions doing our code reusable and readable and this is great! Lets use them.</p>
+                </section>
+                <section>
+                    <h2>How to Call Python Functions</h2>
+                </section>
+                <section>
+                    <pre><code class="python" data-trim data-line-numbers>
+                        def say(person_name, message):
+                            print(person_name + ":", message)
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Default value for argument</p>
+                    <pre><code class="python" data-trim data-line-numbers>
+                        def say(person_name, message="..."):
+                            print(person_name + ":", message)
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Call function with positioned arguments</p>
+                    <pre><code class="python" data-trim data-line-numbers>
+                        def say(person_name, message="..."):
+                            print(person_name + ":", message)
+                        
+                        say('Dmitry', 'Here I\'m using positioned arguments')
+                        say(person_name='Dmitry', message='Here I\'m using key arguments')
+                        say(message='and I can change the order when using key arguments')
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Call function with key arguments</p>
+                    <pre><code class="python" data-trim data-line-numbers>
+                        def say(person_name, message="..."):
+                            print(person_name + ":", message)
+                        
+                        say(person_name="Dmitry", message="here i'm using key arguments")
+                        say(message="and i can change the order when using key arguments", person_name="Dmitry")
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Combining positioned and key arguments</p>
+                    <pre><code class="python" data-trim data-line-numbers>
+                        def say(person_name, message="..."):
+                            print(person_name + ":", message)
+                        
+                        say(Dmitry", message="here i'm using key arguments")
+                    </code></pre>
+                    <p>One condition here we should use key arguments must follow the positional arguments.</p>
+                </section>
+                <section>
+                    <p>Wrong order of positional and key arguments</p>
+                    <pre><code class="python" data-trim data-line-numbers>
+                        def say(person_name, message="..."):
+                            print(person_name + ":", message)
+                        
+                        say(Dmitry", message="here i'm using key arguments") # => SyntaxError: non-keyword arg after keyword arg
+                    </code></pre>
+                    <p>This one will result in a <code>SyntaxError</code>.</p>
+                </section>
+                <section>
+                    <h2>How to call Python function recursively</h2>
+                </section>
+                <section>
+                    TODO
+                </section>
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            });
+        </script>
+    </body>
+</html>
